@@ -62,15 +62,16 @@ improves 45% relative (8.7 → 12.6).
 tok/                 trained tokenisers (.model, minbpe format)
 figures/             all figures, plus fig1_pieces.json
 scripts/
-  pull_data.py       stream corpora from HuggingFace
-  clean.py           NFC, length, exact-dup, script, MinHash LSH
+  pulling_data.ipynb  stream corpora from HuggingFace
   tok_ablation.py    train both tokenisers, emit the fertility table
   tokenize_corpus.py encode to uint16 .bin, mix at 40/35/25
-  sft.py             supervised fine-tuning, answer-only loss masking
+  fetch_sft_v3.py             supervised fine-tuning, answer-only loss masking
   eval_bpb.py        bits-per-byte on raw held-out text
   eval_qa.py         EM / F1 / HasAns / NoAns / span%
-  gen_invoices.py    synthetic German invoice QA generator
-  make_figures.py    all figures from results
+  make_figures_v1.py all figures from results
+  synthetic_invoice_v1.py synthetic German invoice QA generator
+  clean_telugu_data.ipynb NFC, length, exact-dup, script, MinHash LSH
+  clean_english_german_data.ipynb NFC, length, exact-dup, script, MinHash LSH
 config/              nanoGPT configs for the four pre-training runs
 ```
 
@@ -82,8 +83,9 @@ pip install numpy regex tiktoken datasets
 #   Ada:       pip install torch --index-url https://download.pytorch.org/whl/cu124
 #   Blackwell: pip install torch --index-url https://download.pytorch.org/whl/cu128
 
-python scripts/pull_data.py         # ~4-10 h, network bound
-python scripts/clean.py             # ~3 h
+python scripts/pulling_data.ipynb             # ~4-10 h, network bound
+python scripts/clean_telugu_data.ipynb        # ~3 h
+python scripts/clean_english_german_data.ipynb # ~3 h
 python scripts/tok_ablation.py      # ~3 h, both tokenisers
 python scripts/tokenize_corpus.py   # ~2 h
 # pre-training uses nanoGPT: https://github.com/karpathy/nanoGPT
