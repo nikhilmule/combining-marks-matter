@@ -63,7 +63,6 @@ tok/                 trained tokenisers (.model, minbpe format)
 figures/             all figures, plus fig1_pieces.json
 scripts/
   pulling_data.ipynb  stream corpora from HuggingFace
-  tok_ablation.py    train both tokenisers, emit the fertility table
   tokenize_corpus.py encode to uint16 .bin, mix at 40/35/25
   fetch_sft_v3.py             supervised fine-tuning, answer-only loss masking
   eval_bpb.py        bits-per-byte on raw held-out text
@@ -72,6 +71,7 @@ scripts/
   synthetic_invoice_v1.py synthetic German invoice QA generator
   clean_telugu_data.ipynb NFC, length, exact-dup, script, MinHash LSH
   clean_english_german_data.ipynb NFC, length, exact-dup, script, MinHash LSH
+  tokenizer_BPE_training.ipynb    train both tokenisers, emit the fertility table
 config/              nanoGPT configs for the four pre-training runs
 ```
 
