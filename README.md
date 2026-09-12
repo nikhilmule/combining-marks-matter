@@ -59,8 +59,8 @@ improves 45% relative (8.7 → 12.6).
 ## Repository layout
 
 ```
-tok/                 trained tokenisers (.model, minbpe format)
-figures/             all figures, plus fig1_pieces.json
+tok/                              trained tokenisers (.model, minbpe format)
+figures/                          all figures, plus fig1_pieces.json
 scripts/
   pulling_data.ipynb              stream corpora from HuggingFace
   fetch_sft_v3.py                 supervised fine-tuning, answer-only loss masking
