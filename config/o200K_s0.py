@@ -1,0 +1,15 @@
+out_dir = 'E:/Project_SLM/runs/o200k_s0'
+dataset = 'slm_o200k'
+n_layer, n_head, n_embd = 16, 12, 768
+block_size = 1024
+batch_size = 32
+gradient_accumulation_steps = 16
+max_iters = 6000
+lr_decay_iters = 6000
+warmup_iters = 120
+learning_rate = 6e-4
+min_lr = 6e-5
+eval_interval = 250
+eval_iters = 100
+always_save_checkpoint = True
+compile = True
