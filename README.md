@@ -3,7 +3,7 @@
 Pre-tokenisation halves Telugu token counts at a one-percent cost to Latin scripts.
 
 Code, tokenisers and data pipeline for the paper.
-**[Paper (PDF)](COMBINING MARKS MATTER.pdf)** · Nikhil Raj Mule
+**[Paper (PDF)](COMBINING%20MARKS%20MATTER.pdf)** · Nikhil Raj Mule
 
 ---
 
