@@ -63,7 +63,6 @@ tok/                 trained tokenisers (.model, minbpe format)
 figures/             all figures, plus fig1_pieces.json
 scripts/
   pulling_data.ipynb  stream corpora from HuggingFace
-  tokenize_corpus.py encode to uint16 .bin, mix at 40/35/25
   fetch_sft_v3.py             supervised fine-tuning, answer-only loss masking
   eval_bpb.py        bits-per-byte on raw held-out text
   eval_qa.py         EM / F1 / HasAns / NoAns / span%
@@ -72,6 +71,7 @@ scripts/
   clean_telugu_data.ipynb NFC, length, exact-dup, script, MinHash LSH
   clean_english_german_data.ipynb NFC, length, exact-dup, script, MinHash LSH
   tokenizer_BPE_training.ipynb    train both tokenisers, emit the fertility table
+  tokenizer_on_corpus.ipynb encode to uint16 .bin, mix at 40/35/25
 config/              nanoGPT configs for the four pre-training runs
 ```
 
@@ -86,8 +86,8 @@ pip install numpy regex tiktoken datasets
 python scripts/pulling_data.ipynb             # ~4-10 h, network bound
 python scripts/clean_telugu_data.ipynb        # ~3 h
 python scripts/clean_english_german_data.ipynb # ~3 h
-python scripts/tok_ablation.py      # ~3 h, both tokenisers
-python scripts/tokenize_corpus.py   # ~2 h
+python scripts/tokenizer_BPE_training.ipynb     # ~3 h, both tokenisers
+python scripts/tokenizer_on_corpus.ipynb   # ~2 h
 # pre-training uses nanoGPT: https://github.com/karpathy/nanoGPT
 python train.py config/o200k_s0.py  # ~58 h per run on one RTX 5090
 python scripts/eval_bpb.py --all
