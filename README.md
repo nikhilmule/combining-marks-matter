@@ -18,6 +18,9 @@ the split.
 
 ![pre-tokenisation](figures/fig1_pretokenization.png)
 
+**[▶ Demo video](demo.mp4)** — the tokeniser comparison and invoice field
+extraction running on a real PDF.
+
 `o200k_base` (GPT-4o) fixed this by adding `\p{M}` to its letter classes. The
 change is visible in the public tiktoken source but, as far as we can tell,
 was never measured. This repository is that measurement.
