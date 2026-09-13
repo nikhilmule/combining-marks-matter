@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22734731.svg)](https://doi.org/10.5281/zenodo.22734731)
+
 # Combining Marks Matter
 
 Pre-tokenisation halves Telugu token counts at a one-percent cost to Latin scripts.
@@ -137,12 +139,13 @@ measured it. See the Limitations section of the paper.
 ## Citation
 
 ```bibtex
-@misc{mule2026combiningmarks,
+@software{mule2026combiningmarks,
   title  = {Combining Marks Matter: Pre-tokenisation Halves Telugu Token
             Counts at a One-Percent Cost to Latin Scripts},
   author = {Mule, Nikhil Raj},
   year   = {2026},
-  url    = {https://github.com/nikhilmule/combining-marks-matter}
+  doi    = {10.5281/zenodo.22734731},
+  url    = {https://doi.org/10.5281/zenodo.22734731}
 }
 ```
 
