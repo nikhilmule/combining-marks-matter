@@ -18,7 +18,7 @@ the split.
 
 ![pre-tokenisation](figures/fig1_pretokenization.png)
 
-![demo](demo.gif)
+![demo](assets/demo.gif)
 
 **[▶ Full Demo video](assets/Demo.mp4)** — the tokeniser comparison and invoice field
 extraction running on a real PDF.
